@@ -16,7 +16,7 @@ class Cart extends React.Component {
                 <tbody>
                     {this.state.items.map((item, key) => {
                         return (
-                            <Item name={item.name} price={item.price} />
+                            <Item item={item} name={item.name} price={item.price} />
                         );
                     })}
                 </tbody>

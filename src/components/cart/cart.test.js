@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Cart from './cart';
+import Item from '../item/item'
 
 describe('<Cart/>', () => {
     it('is a test', () => {
@@ -9,6 +10,6 @@ describe('<Cart/>', () => {
     it('cart should be empty when app starts', () => {
         const cart = shallow(<Cart/>);
 
-        expect(cart.find('tr')).toHaveLength(0);
+        expect(cart.find(Item)).toHaveLength(0);
     })
 })

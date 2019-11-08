@@ -3,13 +3,22 @@ import { shallow } from 'enzyme';
 import React from 'react';
 
 describe('<Item/>', () => {
-    it('should display the name of the item', () => {
-        const item = shallow(<Item name="Apple" price="1.50" />);
+    let wrapper = null;
+    beforeEach(() => {
+        const item = {name: 'Apple', price: 1.50, onSale: true};
+        wrapper = shallow(<Item item={item} />);
+    })
 
-        expect(item.find('[name="name"]').first().text()).toBe("Apple");
+    it('should display the name of the item', () => {
+        const text = wrapper.find('[name="name"]').first().text();
+        expect(text).toBe('Apple');
     })
     it('should display the price of the item', () => {
-        const item = shallow(<Item name="Apple" price="1.50" />);
-        expect(item.find('[name="price"]').first().text()).toBe("1.50");
+        const text = wrapper.find('[name="price"]').first().text();
+        expect(parseFloat(text)).toBe(1.50);
     })
+    // it('should display whether it is on sale or not', () => {
+    //     let checkbox = wrapper.find({ type: 'checkbox' });
+    //     expect(checkbox.checked).toBe(true);
+    // })
 })

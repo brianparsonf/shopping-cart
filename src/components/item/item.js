@@ -3,8 +3,11 @@ import React from 'react';
 const Item = props => {
     return (
         <tr>
-            <td name="name">{props.name}</td>
-            <td name="price">{props.price}</td>
+            <td name="name">{props.item.name}</td>
+            <td name="price">{props.item.price}</td>
+            <td name="onSale">
+                <input type="checkbox" />
+            </td>
         </tr>
     )
 }

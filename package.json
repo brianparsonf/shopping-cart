@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "@types/jest": "^24.0.22",
     "react": "^16.1.0",
-    "react-axiom": "^0.4.2",
     "react-dom": "^16.1.0",
     "react-scripts": "1.0.17"
   },
@@ -17,9 +15,11 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "@types/jest": "^24.0.22",
     "enzyme": "^3.1.1",
     "enzyme-adapter-react-16": "^1.0.4",
-    "sinon": "^4.1.2"
+    "sinon": "^4.1.2",
+    "util": "^0.12.1"
   },
   "repository": {
     "type": "git",
