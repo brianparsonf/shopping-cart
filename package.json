@@ -6,6 +6,7 @@
   "dependencies": {
     "@types/jest": "^24.0.22",
     "react": "^16.1.0",
+    "react-axiom": "^0.4.2",
     "react-dom": "^16.1.0",
     "react-scripts": "1.0.17"
   },
